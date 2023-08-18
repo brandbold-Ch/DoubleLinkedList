@@ -2,12 +2,11 @@ package Interfaces;
 
 public interface MethodsList {
 
-    void addFront(int data);
-    void crash();
-    void insert(int data, byte index);
-    void delete(int data);
-    void addLast(int data);
-    void printFront();
-    void printLast();
+    void add(Object data);
+    void destroy();
+    void insert(Object data, int index);
+    void replace(Object data, int index);
+    void addFront(Object data);
+    void delete(Object data);
     boolean listEmpty();
 }

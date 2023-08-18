@@ -1,15 +1,15 @@
 package Interfaces;
 
-import Linked.Node;
+import NodeStructure.Node;
 
 public interface NodeRequirements {
 
-    int getData();
-    void setData(int data);
+    Object getData();
+    void setData(Object data);
 
     Node getNext();
-    Node getPrevious();
+    Node getBefore();
 
     void setNext(Node next);
-    void setPrevious(Node previous);
+    void setBefore(Node previous);
 }
