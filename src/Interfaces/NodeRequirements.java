@@ -2,14 +2,14 @@ package Interfaces;
 
 import NodeStructure.Node;
 
-public interface NodeRequirements {
+public interface NodeRequirements<T> {
 
-    Object getData();
-    void setData(Object data);
+    T getData();
+    void setData(T data);
 
-    Node getNext();
-    Node getBefore();
+    Node<T> getNext();
+    Node<T> getBefore();
 
-    void setNext(Node next);
-    void setBefore(Node previous);
+    void setNext(Node<T> next);
+    void setBefore(Node<T> previous);
 }

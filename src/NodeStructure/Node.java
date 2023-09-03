@@ -2,52 +2,48 @@ package NodeStructure;
 
 import Interfaces.NodeRequirements;
 
-public class Node implements NodeRequirements {
+public class Node<T> implements NodeRequirements<T> {
 
-    private Object data;
-    public Node next, before;
+    private T data;
+    public Node<T> next, before;
     protected int items, item;
 
-    public Node(Object data, Node next, Node before, int index){
+    public Node(T data, Node<T> next, Node<T> before, int index){
         this.data = data;
         this.next = next;
         this.before = before;
         this.item = index;
     }
 
-    public Node(Object data){
-        this.data = data;
-    }
-
     public Node(){}
 
     @Override
-    public Object getData() {
+    public T getData() {
         return this.data;
     }
 
     @Override
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
     @Override
-    public Node getNext() {
+    public Node<T> getNext() {
         return this.next;
     }
 
     @Override
-    public Node getBefore() {
+    public Node<T> getBefore() {
         return this.before;
     }
 
     @Override
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
     @Override
-    public void setBefore(Node previous) {
+    public void setBefore(Node<T> previous) {
         this.before = previous;
     }
 

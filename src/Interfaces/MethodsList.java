@@ -1,12 +1,14 @@
 package Interfaces;
 
-public interface MethodsList {
+public interface MethodsList<T> {
+    final String BIDIRECTIONAL_MODE = "bidirectional";
+    final String DIRECTIONAL_MODE = "directional";
 
-    void add(Object data);
+    void add(T data, boolean insert_next);
+    void insert(T data, int index);
+    void replace(T data, int index);
+    void sort(String method_algorithm);
+
     void destroy();
-    void insert(Object data, int index);
-    void replace(Object data, int index);
-    void addFront(Object data);
-    void delete(Object data);
-    boolean listEmpty();
+    void delete(T data);
 }
